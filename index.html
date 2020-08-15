@@ -1,10 +1,6 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
+
 <html class="no-js">
-  <!--<![endif]-->
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,7 +10,14 @@
       content="Website for South London Hardcore Punk band Local Mad Man"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles/style.css" />
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
 
     <!-- Favicon Package -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -26,16 +29,35 @@
     <meta name="application-name" content="Local Mad Man" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="theme-color" content="#000000" />
-    
   </head>
-  <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
 
-    <!-- <script src="" async defer></script> -->
+  <body class="container-fluid">
+    <nav class="navbar navbar-light bg-light justify-content-center">
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">News</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Band</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Gigs</a></li>
+        <li class="nav-item">
+          <a class="navbar-brand" href="#"
+            ><img src="/images/LMM text logo_cropped.png" id="nav-logo"
+          /></a>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="#">Music</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Photos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Videos</a></li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="home">HOME SECTION</main>
+    <section id="news">NEWS SECTION</section>
+    <section id="band">BAND BIO SECTION</section>
+    <section id="gigs">GIGS SECTION</section>
+    <section id="music">MUSIC SECTION</section>
+    <section id="photos">PHOTOS SECTION</section>
+    <section id="videos">VIDEOS SECTION</section>
+    <section id="contact">CONTACT SECTION</section>
   </body>
 </html>
