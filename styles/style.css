@@ -12,38 +12,42 @@ body {
   margin: 0px;
   min-height: 100%;
   width: 100%;
-  font-family: 'roughtypewriterregular', Georgia, Times, serif;
+  font-family: "roughtypewriterregular", Georgia, Times, serif;
 }
 
 @font-face {
-  font-family: 'roughtypewriterbold_italic';
-  src: url('/styles/fonts/rough_typewriter-bld-itl-webfont.woff2') format('woff2'),
-       url('/styles/fonts/rough_typewriter-bld-itl-webfont.woff') format('woff');
+  font-family: "roughtypewriterbold_italic";
+  src: url("/styles/fonts/rough_typewriter-bld-itl-webfont.woff2")
+      format("woff2"),
+    url("/styles/fonts/rough_typewriter-bld-itl-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
-  font-family: 'roughtypewriteritalic';
-  src: url('/styles/fonts/rough_typewriter-itl-webfont.woff2') format('woff2'),
-       url('/styles/fonts/rough_typewriter-itl-webfont.woff') format('woff');
+  font-family: "roughtypewriteritalic";
+  src: url("/styles/fonts/rough_typewriter-itl-webfont.woff2") format("woff2"),
+    url("/styles/fonts/rough_typewriter-itl-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
-  font-family: 'roughtypewriterregular';
-  src: url('/styles/fonts/rough_typewriter-webfont.woff2') format('woff2'),
-       url('/styles/fonts/rough_typewriter-webfont.woff') format('woff');
+  font-family: "roughtypewriterregular";
+  src: url("/styles/fonts/rough_typewriter-webfont.woff2") format("woff2"),
+    url("/styles/fonts/rough_typewriter-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-
 }
 
-.fa {
-  font-family: 'Font Awesome' !important;
+.icon-after::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* NavBar */
@@ -57,7 +61,7 @@ body {
 }
 
 .topNav a {
-  font-family: 'roughtypewriterregular', Georgia, Times, serif;
+  font-family: "roughtypewriterregular", Georgia, Times, serif;
   float: left;
   display: block;
   color: black;
@@ -88,7 +92,9 @@ body {
 }
 
 @media screen and (max-width: 750px) {
-  .topNav a:not(:first-child) {display: none;}
+  .topNav a:not(:first-child) {
+    display: none;
+  }
   .topNav a.icon {
     float: right;
     display: block;
@@ -96,7 +102,9 @@ body {
 }
 
 @media screen and (max-width: 750px) {
-  .topNav.responsive {position: relative;}
+  .topNav.responsive {
+    position: relative;
+  }
   .topNav.responsive a.icon {
     position: absolute;
     right: 0;
@@ -130,4 +138,15 @@ main img {
 
 .image-popup {
   cursor: pointer;
+}
+
+.email-btn::after {
+  content: "\f0e0";
+  font-weight: 400;
+  margin-left: 0.5em;
+}
+
+.fb-btn::after {
+  content: "\f4ad";
+  margin-left: 0.5em;
 }
