@@ -150,3 +150,7 @@ main img {
   content: "\f4ad";
   margin-left: 0.5em;
 }
+
+footer {
+  margin-top: 12rem;
+}
