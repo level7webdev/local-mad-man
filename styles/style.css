@@ -131,9 +131,28 @@ body {
   background-size: cover;
 }
 
+h2 {
+  margin-top: 2rem;
+}
+
+.band li {
+  list-style-type: none;
+}
+
+figcaption {
+  margin-bottom: 2rem;
+}
+
 main img {
   max-width: 70%;
   height: auto;
+}
+
+.gig-date {
+  margin-bottom: 0.75rem;
+  background-color: #f8f9fa;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 3px;
 }
 
 .image-popup {
@@ -152,5 +171,6 @@ main img {
 }
 
 footer {
+  color: #888888;
   margin-top: 12rem;
 }
