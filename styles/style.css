@@ -132,7 +132,15 @@ body {
 }
 
 h2 {
-  margin-top: 2rem;
+  margin-top: 3rem;
+}
+
+p {
+  line-height: 2.5em;
+}
+
+.card-text {
+  line-height: 1.5em;
 }
 
 .band li {
