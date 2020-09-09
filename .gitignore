@@ -1,0 +1,4 @@
+scripts/createGallery.js
+scripts/gallery.json
+scripts/eventsList.json
+node_modules
