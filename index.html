@@ -48,6 +48,8 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Google Fonts -->
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/styles/style.css" />
 
@@ -64,19 +66,28 @@
   </head>
 
   <body>
-    <nav class="topNav" id="topNavBar">
-      <a href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#band">Band</a>
-      <a href="#gigs">Gigs</a>
-      <a href="#music">Music</a>
-      <a href="#photos">Photos</a>
-      <a href="#videos">Videos</a>
-      <a href="#contact">Contact</a>
-      <a href="javascript:void(0);" class="icon" onclick="navMenu()">
-        <i class="fa fa-bars"></i>
+    <div class="nav-container">
+      <a href="#home"
+        ><img
+          src="/images/LMM full logo-cropped.png"
+          alt="Local Mad Man - Home"
+          class="navHomeLogo"
+          id="navHomeLogo"
+        />
       </a>
-    </nav>
+      <nav class="topNav" id="topNavBar">
+        <a href="#news">News</a>
+        <a href="#band">Band</a>
+        <a href="#gigs">Gigs</a>
+        <a href="#music">Music</a>
+        <a href="#photos">Photos</a>
+        <a href="#videos">Videos</a>
+        <a href="#contact">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="navMenu(); navLogo()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+    </div>
     <main id="home" class="parallax"></main>
     <section id="news" class="container">
       <div class="row">

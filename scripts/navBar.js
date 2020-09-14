@@ -1,8 +1,19 @@
 function navMenu() {
-    var x = document.getElementById("topNavBar");
-    if (x.className === "topNav") {
-      x.className += " responsive";
+    var hamburger = document.getElementById("topNavBar");
+    if (hamburger.className === "topNav") {
+      hamburger.className += " responsive";
     } else {
-      x.className = "topNav";
+      hamburger.className = "topNav";
+    }
+  }
+
+  function navLogo() {
+    var navLogo = document.getElementById("navHomeLogo");
+    if (navLogo.className === "navHomeLogo") {
+      navLogo.className += " smallNavLogo"
+      navLogo.src = "/images/LMM text logo-cropped.png";
+    } else {
+      navLogo.className = "navHomeLogo"
+      navLogo.src = "/images/LMM full logo-cropped.png";
     }
   }

@@ -15,6 +15,10 @@ body {
   font-family: "roughtypewriterregular", Georgia, Times, serif;
 }
 
+p {
+  font-size: 1.2rem;
+}
+
 @font-face {
   font-family: "roughtypewriterbold_italic";
   src: url("/styles/fonts/rough_typewriter-bld-itl-webfont.woff2")
@@ -51,13 +55,25 @@ body {
 }
 
 /* NavBar */
-.topNav {
-  background-color: rgba(255, 255, 255, 0.9);
-  overflow: hidden;
+.nav-container {
+  filter: drop-shadow(0px 5px 5px black);
   position: fixed;
   top: 0;
+  background-color: #ffffff;
   width: 100%;
   z-index: 20;
+  text-align: center;
+}
+
+.nav-container a{
+  display: block;
+}
+
+.topNav {
+  background-color: #ffffff;
+  top: 0;
+  padding-left: 310px;
+  width: 100%;
 }
 
 .topNav a {
@@ -68,7 +84,7 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 28px;
 }
 
 .topNav a:hover {
@@ -85,25 +101,49 @@ body {
   display: none;
 }
 
+.navHomeLogo {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  width: 300px;
+  height: auto;
+  z-index: 25;
+}
+
+.navHomeLogo.smallNavLogo{
+  display: block;
+}
+
 @media screen and (max-width: 1200px) {
+  p {
+    font-size: 1.1rem;
+  }
+  .topNav {
+    padding-left: 190px;
+  }
   .topNav a {
     font-size: 20px;
+    padding: 10px 12px;
+
+  }
+  .navHomeLogo {
+    width: 180px;
   }
 }
 
-@media screen and (max-width: 750px) {
-  .topNav a:not(:first-child) {
+@media screen and (max-width: 850px) {
+  p {
+    font-size: 1.05rem;
+  }
+  .topNav a {
     display: none;
   }
   .topNav a.icon {
     float: right;
     display: block;
   }
-}
-
-@media screen and (max-width: 750px) {
   .topNav.responsive {
-    position: relative;
+    position: absolute;
   }
   .topNav.responsive a.icon {
     position: absolute;
@@ -113,7 +153,10 @@ body {
   .topNav.responsive a {
     float: none;
     display: block;
-    text-align: left;
+    /* text-align: center; */
+  }
+  .navHomeLogo {
+    display: block;
   }
 }
 
@@ -159,7 +202,7 @@ main img {
 .gig-date {
   margin-bottom: 0.75rem;
   background-color: #f8f9fa;
-  border: 1px solid rgba(0,0,0,.125);
+  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 3px;
 }
 
