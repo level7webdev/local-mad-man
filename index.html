@@ -49,6 +49,10 @@
     ></script>
 
     <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/styles/style.css" />
@@ -67,7 +71,7 @@
 
   <body>
     <div class="nav-container">
-      <a href="#home"
+      <a href="#home" onclick="navMenuUnload()"
         ><img
           src="/images/LMM full logo-cropped.png"
           alt="Local Mad Man - Home"
@@ -76,336 +80,345 @@
         />
       </a>
       <nav class="topNav" id="topNavBar">
-        <a href="#news">News</a>
-        <a href="#band">Band</a>
-        <a href="#gigs">Gigs</a>
-        <a href="#music">Music</a>
-        <a href="#photos">Photos</a>
-        <a href="#videos">Videos</a>
-        <a href="#contact">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="navMenu(); navLogo()">
+        <a href="#news" onclick="navMenuUnload()">News</a>
+        <a href="#band" onclick="navMenuUnload()">Band</a>
+        <a href="#gigs" onclick="navMenuUnload()">Gigs</a>
+        <a href="#music" onclick="navMenuUnload()">Music</a>
+        <a href="#photos" onclick="navMenuUnload()">Photos</a>
+        <a href="#videos" onclick="navMenuUnload()">Videos</a>
+        <a href="#contact" onclick="navMenuUnload()">Contact</a>
+        <a
+          href="javascript:void(0);"
+          class="icon"
+          onclick="navMenuLoad()"
+        >
           <i class="fa fa-bars"></i>
         </a>
       </nav>
     </div>
-    <main id="home" class="parallax"></main>
-    <section id="news" class="container">
-      <div class="row">
-        <div class="col">
-          <h2>News</h2>
+      <section id="home" class="parallax">
+        <div class="container hero-container">
+          <!-- <h1 class="hero-text">South London Hardcore Punk</h1> -->
         </div>
-      </div>
-    </section>
-    <section id="band" class="container">
-      <div class="row">
-        <div class="col">
-          <h2>Band Info</h2>
-          <p>
-            4 chilled out blokes from SE London playing fast, angry, relentless
-            punk rock.<br />Local Mad Man are:
-          </p>
-          <ul class="band text-center">
-            <li>Chris Josephs - Vocacls</li>
-            <li>Chris Goodman - Guitar</li>
-            <li>Simon Lee - Bass</li>
-            <li>Dom Bodo - Drums</li>
-          </ul>
-          <img
-            src="/images/line-up.jpg"
-            class="img-fluid rounded mx-auto d-block border shadow"
-            alt="Local Mad Man on stage. Left to right: Pies on bass, Chris on vocals, Dom on drums, Güdz on guitar."
-          />
-          <figcaption class="text-center mt-3">
-            Local Mad Man on stage in Southampton.
-          </figcaption>
-          <p>
-            Local Mad Man was formed in 2007, the brainchild of vocalist Chris
-            and guitarist Greg, in deepest darkest SE London. The early years
-            saw the band play numerous gigs on both the punk and metal circuits,
-            focusing on the squat and free party scenes in and around London as
-            well as supporting the likes of Discharge and ENT. A number of
-            drummers came and went but pretty much played without a bassist
-            until the “hiatus” in 2012. At this time, Chris joined “No Last
-            Words” with Güdz, a songwriting partnership that would crack on
-            until the present day.
-          </p>
-          <p>
-            After 2 years, that band reached its end and Greg wanted to restart
-            Local Mad Man again; so the 3 joined forces, with Greg switching to
-            bass duties, playing a set comprised of half NLW songs and a
-            selection of Madman “classics”. The lineup was completed by former
-            “Denounce” drummer Dave Felstead. The EP “I’ve Had Enough” was
-            recorded in Greg’s old print warehouse and many gigs were played.
-            These were very happy times. However, the opportunity of a lifetime
-            saw Dave leave the band and Greg made the commute a bit difficult by
-            moving to America, so a new lineup was cobbled together.
-          </p>
-          <p>
-            Chris found himself at the bar with Pies from Croydon legends “The
-            K.A.D.T.”, which led to him joining on bass, whilst Güdz tapped up
-            an old contact, James Brown, to play drums. Accordingly, the second
-            EP “Amongst the Thieves and Liars” was released via Back From The
-            Dead records in 2017.
-          </p>
-          <p>
-            2018 sees a new man behind the drums and as many gigs as can be
-            played. With a batch of new songs waiting to be aired, combined with
-            a renewed sense of eagerness, Local Mad Man are up for it. Give us a
-            gig, have a beer with us, or both!
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="gigs" class="container">
-      <div class="row">
-        <div class="col">
-          <h2>Gigs</h2>
-          <div class="container" id="events-list">
-            <!-- Gigs get pulled in from events.js here -->
+      </section>
+      <section id="news" class="container">
+        <div class="row">
+          <div class="col">
+            <h2>News</h2>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="music" class="container">
-      <div>
-        <h2>Discography</h2>
-
-        <div class="card-deck">
-          <div class="card bg-light">
+      </section>
+      <section id="band" class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Band Info</h2>
+            <p>
+              4 chilled out blokes from SE London playing fast, angry,
+              relentless punk rock.<br />Local Mad Man are:
+            </p>
+            <ul class="band text-center">
+              <li>Chris Josephs - Vocacls</li>
+              <li>Chris Goodman - Guitar</li>
+              <li>Simon Lee - Bass</li>
+              <li>Dom Bodo - Drums</li>
+            </ul>
             <img
-              src="images/discography/SRD-005.png"
-              class="card-img-top image-popup"
-              data-toggle="modal"
-              data-target="#SRD-005"
-              alt="Amongst the Thieves and Liars cover"
+              src="/images/line-up.jpg"
+              class="img-fluid rounded mx-auto d-block border shadow"
+              alt="Local Mad Man on stage. Left to right: Pies on bass, Chris on vocals, Dom on drums, Güdz on guitar."
             />
+            <figcaption class="text-center mt-3">
+              Local Mad Man on stage in Southampton.
+            </figcaption>
+            <p>
+              Local Mad Man was formed in 2007, the brainchild of vocalist Chris
+              and guitarist Greg, in deepest darkest SE London. The early years
+              saw the band play numerous gigs on both the punk and metal
+              circuits, focusing on the squat and free party scenes in and
+              around London as well as supporting the likes of Discharge and
+              ENT. A number of drummers came and went but pretty much played
+              without a bassist until the “hiatus” in 2012. At this time, Chris
+              joined “No Last Words” with Güdz, a songwriting partnership that
+              would crack on until the present day.
+            </p>
+            <p>
+              After 2 years, that band reached its end and Greg wanted to
+              restart Local Mad Man again; so the 3 joined forces, with Greg
+              switching to bass duties, playing a set comprised of half NLW
+              songs and a selection of Madman “classics”. The lineup was
+              completed by former “Denounce” drummer Dave Felstead. The EP “I’ve
+              Had Enough” was recorded in Greg’s old print warehouse and many
+              gigs were played. These were very happy times. However, the
+              opportunity of a lifetime saw Dave leave the band and Greg made
+              the commute a bit difficult by moving to America, so a new lineup
+              was cobbled together.
+            </p>
+            <p>
+              Chris found himself at the bar with Pies from Croydon legends “The
+              K.A.D.T.”, which led to him joining on bass, whilst Güdz tapped up
+              an old contact, James Brown, to play drums. Accordingly, the
+              second EP “Amongst the Thieves and Liars” was released via Back
+              From The Dead records in 2017.
+            </p>
+            <p>
+              2018 sees a new man behind the drums and as many gigs as can be
+              played. With a batch of new songs waiting to be aired, combined
+              with a renewed sense of eagerness, Local Mad Man are up for it.
+              Give us a gig, have a beer with us, or both!
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="gigs" class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Gigs</h2>
+            <div class="container" id="events-list">
+              <!-- Gigs get pulled in from events.js here -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="music" class="container">
+        <div>
+          <h2>Discography</h2>
 
+          <div class="card-deck">
+            <div class="card bg-light">
+              <img
+                src="images/discography/SRD-005.png"
+                class="card-img-top image-popup"
+                data-toggle="modal"
+                data-target="#SRD-005"
+                alt="Amongst the Thieves and Liars cover"
+              />
+
+              <div
+                id="SRD-005"
+                class="modal fade"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="Amongst the Thieves and Liars EP"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <img
+                        src="images/discography/SRD-005.png"
+                        class="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title">Amongst the Thieves and Liars EP</h5>
+                <p class="card-text">
+                  Our 'Amongst The Thieves And Liars' EP is the first new
+                  release from Local Mad Man's new lineup. Released by the
+                  ever-awesome Back From The Dead Records.
+                </p>
+              </div>
+              <div class="card-footer">
+                <iframe
+                  style="border: 0; width: 100%; height: 120px"
+                  src="https://bandcamp.com/EmbeddedPlayer/album=1539667587/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/"
+                  seamless
+                  ><a
+                    href="http://localmadman.bandcamp.com/album/amongst-the-thieves-and-liars-ep"
+                    >Amongst The Thieves And Liars EP by Local Mad Man</a
+                  ></iframe
+                >
+                <iframe
+                  src="https://open.spotify.com/embed/album/5J8ffPNdEx2WDAk5h1MhWc"
+                  width="100%"
+                  height="80"
+                  frameborder="0"
+                  allowtransparency="true"
+                  allow="encrypted-media"
+                ></iframe>
+                <a
+                  href="https://geo.music.apple.com/gb/album/amongst-the-thieves-and-liars-ep/1521540446?mt=1&app=music"
+                  class="float-right"
+                  style="
+                    display: inline-block;
+                    overflow: hidden;
+                    background: url(https://linkmaker.itunes.apple.com/en-gb/badge-lrg.svg?releaseDate=2017-07-06&kind=album&bubble=apple_music)
+                      no-repeat;
+                    width: 158px;
+                    height: 45px;
+                  "
+                ></a>
+              </div>
+            </div>
+            <div class="card bg-light">
+              <img
+                src="images/discography/SRD-004.png"
+                class="card-img-top image-popup"
+                data-toggle="modal"
+                data-target="#SRD-004"
+                alt="I've Had Enough cover"
+              />
+
+              <div
+                id="SRD-004"
+                class="modal fade"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="I've Had Enough EP"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <img
+                        src="images/discography/SRD-004.png"
+                        class="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title">I've Had Enough EP</h5>
+                <p class="card-text">
+                  Local Mad Man's debut EP 'I've Had Enough'. Released May 2015.
+                  All songs by Goodman, Cruse, Josephs, Felstead.
+                </p>
+              </div>
+              <div class="card-footer">
+                <iframe
+                  style="border: 0; width: 100%; height: 120px"
+                  src="https://bandcamp.com/EmbeddedPlayer/album=172269583/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/"
+                  seamless
+                  ><a
+                    href="http://localmadman.bandcamp.com/album/ive-had-enough-ep"
+                    >I&#39;ve Had Enough EP by Local Mad Man</a
+                  ></iframe
+                >
+                <iframe
+                  src="https://open.spotify.com/embed/album/3FPJWzHfm68VkZaYutQGRT"
+                  width="100%"
+                  height="80"
+                  frameborder="0"
+                  allowtransparency="true"
+                  allow="encrypted-media"
+                ></iframe>
+                <a
+                  href="https://geo.music.apple.com/gb/album/ive-had-enough-ep/1521626246?mt=1&app=music"
+                  class="float-left"
+                  style="
+                    display: inline-block;
+                    overflow: hidden;
+                    background: url(https://linkmaker.itunes.apple.com/en-gb/badge-lrg.svg?releaseDate=2015-05-01&kind=album&bubble=apple_music)
+                      no-repeat;
+                    width: 158px;
+                    height: 45px;
+                  "
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="photos" class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Photos</h2>
             <div
-              id="SRD-005"
-              class="modal fade"
-              tabindex="-1"
-              role="dialog"
-              aria-labelledby="Amongst the Thieves and Liars EP"
-              aria-hidden="true"
+              id="localMadManGallery"
+              class="carousel slide"
+              data-ride="carousel"
             >
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <img
-                      src="images/discography/SRD-005.png"
-                      class="img-fluid"
-                    />
+              <div class="carousel-inner" id="localMadManGalleryJS">
+                <!-- Gallery items get pulled in from gallery.js here -->
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#localMadManGallery"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#localMadManGallery"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="videos" class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Videos</h2>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/7HeNaE5-Lq0"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Contact</h2>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Gig Enquiries</h5>
+                    <p class="card-text">
+                      Get in touch with us if you want us to play your gig
+                    </p>
+                    <a
+                      href="mailto:localmadmanuk@gmail.com?subject=Contact%20from%20website"
+                      class="btn btn-primary icon-after email-btn"
+                      >eMail</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Facebook</h5>
+                    <p class="card-text">Send us dad jokes and memes.</p>
+                    <a
+                      href="http://m.me/localmadmanuk"
+                      class="btn btn-primary icon-after fb-btn"
+                      target="_blank"
+                      >fb message</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="card-body">
-              <h5 class="card-title">Amongst the Thieves and Liars EP</h5>
-              <p class="card-text">
-                Our 'Amongst The Thieves And Liars' EP is the first new release
-                from Local Mad Man's new lineup. Released by the ever-awesome
-                Back From The Dead Records.
-              </p>
-            </div>
-            <div class="card-footer">
-              <iframe
-                style="border: 0; width: 100%; height: 120px"
-                src="https://bandcamp.com/EmbeddedPlayer/album=1539667587/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/"
-                seamless
-                ><a
-                  href="http://localmadman.bandcamp.com/album/amongst-the-thieves-and-liars-ep"
-                  >Amongst The Thieves And Liars EP by Local Mad Man</a
-                ></iframe
-              >
-              <iframe
-                src="https://open.spotify.com/embed/album/5J8ffPNdEx2WDAk5h1MhWc"
-                width="100%"
-                height="80"
-                frameborder="0"
-                allowtransparency="true"
-                allow="encrypted-media"
-              ></iframe>
-              <a
-                href="https://geo.music.apple.com/gb/album/amongst-the-thieves-and-liars-ep/1521540446?mt=1&app=music"
-                class="float-right"
-                style="
-                  display: inline-block;
-                  overflow: hidden;
-                  background: url(https://linkmaker.itunes.apple.com/en-gb/badge-lrg.svg?releaseDate=2017-07-06&kind=album&bubble=apple_music)
-                    no-repeat;
-                  width: 158px;
-                  height: 45px;
-                "
-              ></a>
-            </div>
-          </div>
-          <div class="card bg-light">
-            <img
-              src="images/discography/SRD-004.png"
-              class="card-img-top image-popup"
-              data-toggle="modal"
-              data-target="#SRD-004"
-              alt="I've Had Enough cover"
-            />
-
-            <div
-              id="SRD-004"
-              class="modal fade"
-              tabindex="-1"
-              role="dialog"
-              aria-labelledby="I've Had Enough EP"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-lg modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <img
-                      src="images/discography/SRD-004.png"
-                      class="img-fluid"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-body">
-              <h5 class="card-title">I've Had Enough EP</h5>
-              <p class="card-text">
-                Local Mad Man's debut EP 'I've Had Enough'. Released May 2015.
-                All songs by Goodman, Cruse, Josephs, Felstead.
-              </p>
-            </div>
-            <div class="card-footer">
-              <iframe
-                style="border: 0; width: 100%; height: 120px"
-                src="https://bandcamp.com/EmbeddedPlayer/album=172269583/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/transparent=true/"
-                seamless
-                ><a
-                  href="http://localmadman.bandcamp.com/album/ive-had-enough-ep"
-                  >I&#39;ve Had Enough EP by Local Mad Man</a
-                ></iframe
-              >
-              <iframe
-                src="https://open.spotify.com/embed/album/3FPJWzHfm68VkZaYutQGRT"
-                width="100%"
-                height="80"
-                frameborder="0"
-                allowtransparency="true"
-                allow="encrypted-media"
-              ></iframe>
-              <a
-                href="https://geo.music.apple.com/gb/album/ive-had-enough-ep/1521626246?mt=1&app=music"
-                class="float-left"
-                style="
-                  display: inline-block;
-                  overflow: hidden;
-                  background: url(https://linkmaker.itunes.apple.com/en-gb/badge-lrg.svg?releaseDate=2015-05-01&kind=album&bubble=apple_music)
-                    no-repeat;
-                  width: 158px;
-                  height: 45px;
-                "
-              ></a>
-            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="photos" class="container">
-      <div class="row">
-        <div class="col">
-          <h2>Photos</h2>
-          <div
-            id="localMadManGallery"
-            class="carousel slide"
-            data-ride="carousel"
-          >
-            <div class="carousel-inner" id="localMadManGalleryJS">
-              <!-- Gallery items get pulled in from gallery.js here -->
-            </div>
-            <a
-              class="carousel-control-prev"
-              href="#localMadManGallery"
-              role="button"
-              data-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a
-              class="carousel-control-next"
-              href="#localMadManGallery"
-              role="button"
-              data-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="videos" class="container">
-      <div class="row">
-        <div class="col">
-          <h2>Videos</h2>
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/7HeNaE5-Lq0"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="contact" class="container">
-      <div class="row">
-        <div class="col">
-          <h2>Contact</h2>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Gig Enquiries</h5>
-                  <p class="card-text">
-                    Get in touch with us if you want us to play your gig
-                  </p>
-                  <a
-                    href="mailto:localmadmanuk@gmail.com?subject=Contact%20from%20website"
-                    class="btn btn-primary icon-after email-btn"
-                    >eMail</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Facebook</h5>
-                  <p class="card-text">Send us dad jokes and memes.</p>
-                  <a
-                    href="http://m.me/localmadmanuk"
-                    class="btn btn-primary icon-after fb-btn"
-                    target="_blank"
-                    >fb message</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
     <footer class="container">
       <div class="d-flex justify-content-center">
         <p>

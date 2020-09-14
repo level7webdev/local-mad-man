@@ -15,8 +15,26 @@ body {
   font-family: "roughtypewriterregular", Georgia, Times, serif;
 }
 
+.hero-container {
+  height: 100%;
+  display: flex;
+}
+
+.hero-text {
+  display: inline-block;
+  align-self: flex-end;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Trade Winds", cursive;
+  color: white;
+  font-size: min(8vh, 12vw);
+}
+
 p {
   font-size: 1.2rem;
+  line-height: 2.5em;
 }
 
 @font-face {
@@ -65,7 +83,7 @@ p {
   text-align: center;
 }
 
-.nav-container a{
+.nav-container a {
   display: block;
 }
 
@@ -110,7 +128,7 @@ p {
   z-index: 25;
 }
 
-.navHomeLogo.smallNavLogo{
+.navHomeLogo.smallNavLogo {
   display: block;
 }
 
@@ -124,7 +142,6 @@ p {
   .topNav a {
     font-size: 20px;
     padding: 10px 12px;
-
   }
   .navHomeLogo {
     width: 180px;
@@ -132,8 +149,11 @@ p {
 }
 
 @media screen and (max-width: 850px) {
-  p {
-    font-size: 1.05rem;
+  p,
+  li,
+  .gig-date {
+    font-size: 0.9rem;
+    line-height: 2rem;
   }
   .topNav a {
     display: none;
@@ -144,6 +164,9 @@ p {
   }
   .topNav.responsive {
     position: absolute;
+    padding-left: 0px;
+    padding-top: 100px;
+    height: 100vh;
   }
   .topNav.responsive a.icon {
     position: absolute;
@@ -157,9 +180,9 @@ p {
   }
   .navHomeLogo {
     display: block;
+    width: 120px;
   }
 }
-
 .parallax {
   /* The image used */
   background-image: url("/images/home-bkg.jpg");
@@ -174,12 +197,14 @@ p {
   background-size: cover;
 }
 
-h2 {
-  margin-top: 3rem;
+@media screen and (max-width: 850px) {
+  .parallax {
+    background-size: auto 100%; 
+  }
 }
 
-p {
-  line-height: 2.5em;
+h2 {
+  margin-top: 3rem;
 }
 
 .card-text {

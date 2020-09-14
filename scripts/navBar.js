@@ -1,4 +1,4 @@
-function navMenu() {
+function navMenuLoad() {
     var hamburger = document.getElementById("topNavBar");
     if (hamburger.className === "topNav") {
       hamburger.className += " responsive";
@@ -7,13 +7,6 @@ function navMenu() {
     }
   }
 
-  function navLogo() {
-    var navLogo = document.getElementById("navHomeLogo");
-    if (navLogo.className === "navHomeLogo") {
-      navLogo.className += " smallNavLogo"
-      navLogo.src = "/images/LMM text logo-cropped.png";
-    } else {
-      navLogo.className = "navHomeLogo"
-      navLogo.src = "/images/LMM full logo-cropped.png";
+  function navMenuUnload() {
+    document.getElementById("topNavBar").className = "topNav";
     }
-  }
