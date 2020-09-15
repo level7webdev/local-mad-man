@@ -1,40 +1,14 @@
+/* Index:             */
+/* 1. Global & Resets */
+/* 2. Typography      */
+/* 3. Layout          */
+/* 4. Utilities       */
+/* 5. Media Queries   */
+/* ****************** */
+
+/* 1. Global & Resets */
 :root {
   --primary-color: rgb(208, 29, 29);
-}
-
-html {
-  margin: 0px;
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  margin: 0px;
-  min-height: 100%;
-  width: 100%;
-  font-family: "roughtypewriterregular", Georgia, Times, serif;
-}
-
-.hero-container {
-  height: 100%;
-  display: flex;
-}
-
-.hero-text {
-  display: inline-block;
-  align-self: flex-end;
-  text-align: center;
-}
-
-h1 {
-  font-family: "Trade Winds", cursive;
-  color: white;
-  font-size: min(8vh, 12vw);
-}
-
-p {
-  font-size: 1.2rem;
-  line-height: 2.5em;
 }
 
 @font-face {
@@ -42,39 +16,58 @@ p {
   src: url("/styles/fonts/rough_typewriter-bld-itl-webfont.woff2")
       format("woff2"),
     url("/styles/fonts/rough_typewriter-bld-itl-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
   font-family: "roughtypewriteritalic";
   src: url("/styles/fonts/rough_typewriter-itl-webfont.woff2") format("woff2"),
     url("/styles/fonts/rough_typewriter-itl-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
   font-family: "roughtypewriterregular";
   src: url("/styles/fonts/rough_typewriter-webfont.woff2") format("woff2"),
     url("/styles/fonts/rough_typewriter-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
 
-.icon-after::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
+body {
+  min-height: 100%;
+  width: 100%;
+  font-family: "roughtypewriterregular", Georgia, Times, serif;
 }
 
-/* NavBar */
+/* 2. Typography      */
+h2 {
+  margin-top: 3rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 2.5em;
+}
+
+figcaption {
+  margin-bottom: 2rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
+.band li {
+  list-style-type: none;
+}
+
+footer {
+  color: #888888;
+  margin-top: 12rem;
+}
+
+/* 3. Layout          */
+/* -- NavBar */
 .nav-container {
-  filter: drop-shadow(0px 5px 5px black);
+  filter: drop-shadow(0px 2px 4px black);
   position: fixed;
   top: 0;
   background-color: #ffffff;
@@ -88,8 +81,6 @@ p {
 }
 
 .topNav {
-  background-color: #ffffff;
-  top: 0;
   padding-left: 310px;
   width: 100%;
 }
@@ -100,13 +91,13 @@ p {
   display: block;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 14px;
   text-decoration: none;
   font-size: 28px;
 }
 
-.topNav a:hover {
-  background-color: white;
+.topNav a:hover,
+a:focus {
   color: var(--primary-color);
 }
 
@@ -132,6 +123,74 @@ p {
   display: block;
 }
 
+.hero-container {
+  height: 100%;
+  display: flex;
+}
+
+.hero-text {
+  display: inline-block;
+  align-self: flex-end;
+  text-align: center;
+}
+
+.gig-date {
+  margin-bottom: 0.75rem;
+  padding: 0.25rem 0;
+  background-color: #f8f9fa;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 3px;
+}
+
+main img {
+  max-width: 70%;
+  height: auto;
+}
+
+/* 4. Utilities       */
+/* -- Parallax */
+.parallax {
+  /* The image used */
+  background-image: url("/images/home-bkg.jpg");
+
+  /* Full height */
+  height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* -- font-awesome pseudo elements */
+.icon-after::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.email-btn::after {
+  content: "\f0e0";
+  font-weight: 400;
+  margin-left: 0.5em;
+}
+
+.fb-btn::after {
+  content: "\f4ad";
+  margin-left: 0.5em;
+}
+
+/* -- modal pointer */
+.image-popup {
+  cursor: pointer;
+}
+
+/* 5. Media Queries   */
 @media screen and (max-width: 1200px) {
   p {
     font-size: 1.1rem;
@@ -182,71 +241,8 @@ p {
     display: block;
     width: 120px;
   }
-}
-.parallax {
-  /* The image used */
-  background-image: url("/images/home-bkg.jpg");
-
-  /* Full height */
-  height: 100vh;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media screen and (max-width: 850px) {
   .parallax {
-    background-size: auto 100%; 
+    background-position: auto;
+    background-size: auto;
   }
-}
-
-h2 {
-  margin-top: 3rem;
-}
-
-.card-text {
-  line-height: 1.5em;
-}
-
-.band li {
-  list-style-type: none;
-}
-
-figcaption {
-  margin-bottom: 2rem;
-}
-
-main img {
-  max-width: 70%;
-  height: auto;
-}
-
-.gig-date {
-  margin-bottom: 0.75rem;
-  background-color: #f8f9fa;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 3px;
-}
-
-.image-popup {
-  cursor: pointer;
-}
-
-.email-btn::after {
-  content: "\f0e0";
-  font-weight: 400;
-  margin-left: 0.5em;
-}
-
-.fb-btn::after {
-  content: "\f4ad";
-  margin-left: 0.5em;
-}
-
-footer {
-  color: #888888;
-  margin-top: 12rem;
 }

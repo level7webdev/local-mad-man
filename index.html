@@ -49,12 +49,9 @@
     ></script>
 
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap"
-      rel="stylesheet"
-    />
 
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/style.css" />
 
     <!-- Favicon Package -->
@@ -71,7 +68,7 @@
 
   <body>
     <div class="nav-container">
-      <a href="#home" onclick="navMenuUnload()"
+      <a href="#home" tabindex="-1" onclick="navMenuUnload()"
         ><img
           src="/images/LMM full logo-cropped.png"
           alt="Local Mad Man - Home"
@@ -80,25 +77,26 @@
         />
       </a>
       <nav class="topNav" id="topNavBar">
-        <a href="#news" onclick="navMenuUnload()">News</a>
-        <a href="#band" onclick="navMenuUnload()">Band</a>
-        <a href="#gigs" onclick="navMenuUnload()">Gigs</a>
-        <a href="#music" onclick="navMenuUnload()">Music</a>
-        <a href="#photos" onclick="navMenuUnload()">Photos</a>
-        <a href="#videos" onclick="navMenuUnload()">Videos</a>
-        <a href="#contact" onclick="navMenuUnload()">Contact</a>
-        <a
+        <ul>
+        <li><a href="#news" onclick="navMenuUnload()">News</a></li>
+        <li><a href="#band" onclick="navMenuUnload()">Band</a></li>
+        <li><a href="#gigs" onclick="navMenuUnload()">Gigs</a></li>
+        <li><a href="#music" onclick="navMenuUnload()">Music</a></li>
+        <li><a href="#photos" onclick="navMenuUnload()">Photos</a></li>
+        <li><a href="#videos" onclick="navMenuUnload()">Videos</a></li>
+        <li><a href="#contact" onclick="navMenuUnload()">Contact</a></li>
+        <li><a
           href="javascript:void(0);"
           class="icon"
           onclick="navMenuLoad()"
         >
           <i class="fa fa-bars"></i>
-        </a>
+        </a></li>
+        </ul>
       </nav>
     </div>
       <section id="home" class="parallax">
         <div class="container hero-container">
-          <!-- <h1 class="hero-text">South London Hardcore Punk</h1> -->
         </div>
       </section>
       <section id="news" class="container">
