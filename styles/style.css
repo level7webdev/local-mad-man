@@ -9,6 +9,20 @@
 /* 1. Global & Resets */
 :root {
   --primary-color: rgb(208, 29, 29);
+  --darkMode-nav-bkg: white;
+  --darkMode-bkg: white;
+  --darkMode-gig-bkg: #f8f9fa;
+  --darkMode-gig-border: rgba(0, 0, 0, 0.125);
+  --darkMode-text: black;
+}
+
+.darkModeEnabled {
+  --primary-color: rgb(208, 29, 29);
+  --darkMode-nav-bkg: #080808;
+  --darkMode-bkg: #131518;
+  --darkMode-gig-bkg: #080808;
+  --darkMode-gig-border: rgba(255, 255, 255, 0.125);
+  --darkMode-text: #f0f0f0;
 }
 
 @font-face {
@@ -31,6 +45,8 @@
 }
 
 body {
+  background-color: var(--darkMode-bkg);
+  color: var(--darkMode-text);
   min-height: 100%;
   width: 100%;
   font-family: "roughtypewriterregular", Georgia, Times, serif;
@@ -64,17 +80,17 @@ figcaption {
 }
 
 footer {
-  color: #888888;
+  color: var(--darkMode-text);
+  opacity: 0.6;
   margin-top: 12rem;
 }
 
 /* 3. Layout          */
 /* -- Navigation */
 .nav-container {
-  filter: drop-shadow(0px 2px 4px black);
   position: fixed;
   top: 0;
-  background-color: #ffffff;
+  background-color: var(--darkMode-nav-bkg);
   min-height: 45px;
   width: 100%;
   z-index: 20;
@@ -94,7 +110,7 @@ footer {
   font-family: "roughtypewriterregular", Georgia, Times, serif;
   float: left;
   display: block;
-  color: black;
+  color: var(--darkMode-text);
   text-align: center;
   padding: 14px 14px;
   text-decoration: none;
@@ -107,8 +123,7 @@ a:focus {
 }
 
 .topNav a.active {
-  background-color: var(--primary-color);
-  color: black;
+  color: var(--primary-color);
 }
 
 .topNav .icon {
@@ -116,6 +131,7 @@ a:focus {
 }
 
 .navHomeLogo {
+  filter: drop-shadow(0px 16px 32px black);
   position: fixed;
   top: 5px;
   left: 5px;
@@ -138,8 +154,8 @@ a:focus {
 .gig-date {
   margin-bottom: 0.75rem;
   padding: 0.25rem 0;
-  background-color: #f8f9fa;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: var(--darkMode-gig-bkg);
+  border: 1px solid var(--darkMode-gig-border);
   border-radius: 3px;
 }
 
@@ -225,7 +241,7 @@ main img {
     right: 0;
   }
   .topNav.responsive {
-    background-color: white;
+    background-color: var(--darkMode-bkg);
     position: absolute;
     padding-left: 0px;
     padding-top: 100px;
