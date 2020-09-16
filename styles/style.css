@@ -36,6 +36,10 @@ body {
   font-family: "roughtypewriterregular", Georgia, Times, serif;
 }
 
+ul {
+  padding-inline-start: 0;
+}
+
 /* 2. Typography      */
 h2 {
   margin-top: 3rem;
@@ -65,12 +69,13 @@ footer {
 }
 
 /* 3. Layout          */
-/* -- NavBar */
+/* -- Navigation */
 .nav-container {
   filter: drop-shadow(0px 2px 4px black);
   position: fixed;
   top: 0;
   background-color: #ffffff;
+  min-height: 45px;
   width: 100%;
   z-index: 20;
   text-align: center;
@@ -119,10 +124,6 @@ a:focus {
   z-index: 25;
 }
 
-.navHomeLogo.smallNavLogo {
-  display: block;
-}
-
 .hero-container {
   height: 100%;
   display: flex;
@@ -143,7 +144,7 @@ a:focus {
 }
 
 main img {
-  max-width: 70%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -200,7 +201,7 @@ main img {
   }
   .topNav a {
     font-size: 20px;
-    padding: 10px 12px;
+    padding: 10px 10px;
   }
   .navHomeLogo {
     width: 180px;
@@ -218,28 +219,34 @@ main img {
     display: none;
   }
   .topNav a.icon {
-    float: right;
-    display: block;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    right: 0;
   }
   .topNav.responsive {
+    background-color: white;
     position: absolute;
     padding-left: 0px;
     padding-top: 100px;
     height: 100vh;
   }
   .topNav.responsive a.icon {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
   }
   .topNav.responsive a {
     float: none;
     display: block;
-    /* text-align: center; */
+    padding: 4px auto;
   }
   .navHomeLogo {
-    display: block;
+    display: inline-block;
+    position: fixed;
     width: 120px;
+    top: 5px;
+    left: 5px;
   }
   .parallax {
     background-position: auto;
