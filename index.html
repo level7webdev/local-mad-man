@@ -66,7 +66,7 @@
     <meta name="theme-color" content="#000000" />
   </head>
 
-  <body class="darkModeEnabled">
+  <body class="">
     <div class="nav-container">
       <a href="#home" tabindex="-1" onclick="navMenuUnload()"
         ><img
@@ -91,6 +91,10 @@
             </a>
           </li>
         </ul>
+        <div class="dark-mode-switch" id="dark-mode-switch">
+          <i id="dark-mode-on" class="fas fa-toggle-on hidden"></i>
+          <i id="dark-mode-off" class="fas fa-toggle-off"></i>
+        </div>
       </nav>
     </div>
     <section id="home" class="parallax">
@@ -429,4 +433,5 @@
   <script src="/scripts/navBar.js"></script>
   <script type="module" src="/scripts/events.js"></script>
   <script type="module" src="/scripts/gallery.js"></script>
+  <script type="module" src="/scripts/darkMode.js"></script>
 </html>
