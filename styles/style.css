@@ -99,7 +99,7 @@ footer {
   position: fixed;
   top: 0;
   background-color: var(--darkMode-nav-bkg);
-  min-height: 45px;
+  min-height: 55px;
   width: 100%;
   z-index: 20;
   text-align: center;
@@ -114,13 +114,13 @@ footer {
   width: 100%;
   height: 100%;
   font-size: 28px;
-  padding: 0px 14px;
 }
 
 .topNav a {
   font-family: "roughtypewriterregular", Georgia, Times, serif;
   float: left;
   display: block;
+  padding: 0px 14px;
   color: var(--darkMode-text);
   text-align: center;
   text-decoration: none;
@@ -129,6 +129,7 @@ footer {
 
 .topNav i {
   display: block;
+  padding: 0px 14px;
   font-size: 0.8em;
 }
 
@@ -147,7 +148,7 @@ a:focus {
 
 .topNav .dark-mode-switch {
   float: right;
-  cursor: pointer;
+  cursor: í;
 }
 
 .topNav .hidden {
@@ -238,6 +239,9 @@ main img {
   .anchor {
     top: -80px;
   }
+  .nav-container {
+    min-height: 45px;
+  }
   .topNav {
     padding-left: 190px;
   }
@@ -259,6 +263,9 @@ main img {
   }
   .anchor {
     top: -60px;
+  }
+  .topNav {
+    padding-left: 130px;
   }
   .topNav a {
     display: none;
@@ -288,10 +295,15 @@ main img {
   }
   .topNav .dark-mode-switch {
     float: none;
-  }
-  
+  }  
   .topNav .hidden {
     display: none;
+  }
+  .dark-mode-switch {
+    display: none;
+  }
+  .dark-mode-switch.responsive{
+    display: inherit;
   }
   .navHomeLogo {
     display: inline-block;
