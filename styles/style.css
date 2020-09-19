@@ -148,7 +148,7 @@ a:focus {
 
 .dark-mode-switch {
   float: right;
-  cursor: í;
+  cursor: pointer;
 }
 
 .topNav .hidden {
