@@ -44,6 +44,10 @@
     url("/styles/fonts/rough_typewriter-webfont.woff") format("woff");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--darkMode-bkg);
   color: var(--darkMode-text);
