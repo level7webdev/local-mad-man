@@ -1,6 +1,7 @@
 let darkMode = localStorage.getItem('darkMode');
 const darkModeToggle = document.querySelector('#dark-mode-switch');
 const allCards = document.querySelectorAll(".card");
+const allModals = document.querySelectorAll(".modal-body");
 const switchOn = document.querySelector('#dark-mode-on');
 const switchOff = document.querySelector('#dark-mode-off');
 
@@ -15,6 +16,10 @@ allCards.forEach(function(el) {
     el.classList.add("bg-dark");
     el.classList.remove("bg-light");
 })
+allModals.forEach(function(el) {
+    el.classList.add("bg-dark");
+    el.classList.remove("bg-light");
+})
 switchOn.classList.remove('hidden');
 switchOff.classList.add('hidden');
 
@@ -26,6 +31,10 @@ const disableDarkMode = () => {
     // removes class dark-mode to body
     document.body.classList.remove('darkModeEnabled');
     allCards.forEach(function(el) {
+        el.classList.add("bg-light");
+        el.classList.remove("bg-dark");
+    })
+    allModals.forEach(function(el) {
         el.classList.add("bg-light");
         el.classList.remove("bg-dark");
     })
