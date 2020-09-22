@@ -79,7 +79,7 @@ h2 {
 
 p {
   font-size: 1.2rem;
-  line-height: 2.5em;
+  line-height: 2rem;
 }
 
 figcaption {
@@ -88,11 +88,12 @@ figcaption {
 
 .card-text {
   font-size: 1rem;
-  line-height: 1.5em;
+  line-height: 1.7rem;
 }
 
 .band li {
   list-style-type: none;
+  line-height: 1.5rem;
 }
 
 footer {
@@ -173,16 +174,16 @@ a:focus {
   z-index: 25;
 }
 
-.hero-container {
+/* .hero-container {
   height: 100%;
   display: flex;
-}
+} */
 
-.hero-text {
+/* .hero-text {
   display: inline-block;
   align-self: flex-end;
   text-align: center;
-}
+} */
 
 .gig-date {
   margin-bottom: 0.75rem;
@@ -268,7 +269,7 @@ main img {
   li,
   .gig-date {
     font-size: 0.9rem;
-    line-height: 2rem;
+    line-height: 1.8rem;
   }
   .anchor {
     top: -60px;
@@ -288,8 +289,7 @@ main img {
   .topNav.responsive {
     background-color: var(--darkMode-bkg);
     position: absolute;
-    padding-left: 0px;
-    padding-top: 100px;
+    padding: 80px 0px;
     height: 100vh;
   }
   .topNav.responsive a.icon {
@@ -304,14 +304,14 @@ main img {
   }
   .topNav .dark-mode-switch {
     float: none;
-  }  
+  }
   .topNav .hidden {
     display: none;
   }
   .dark-mode-switch {
     display: none;
   }
-  .dark-mode-switch.responsive{
+  .dark-mode-switch.responsive {
     display: inherit;
   }
   .navHomeLogo {
@@ -322,7 +322,8 @@ main img {
     left: 5px;
   }
   .parallax {
-    background-position: auto;
-    background-size: auto;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
   }
 }
