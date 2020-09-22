@@ -18,13 +18,9 @@ function navMenuLoad() {
   function navMenuUnload() {
     if (hamburger.className === "topNav responsive") {
       hamburger.className = "topNav";
-    } else {
-      hamburger.className += " responsive";
     };
     
-    if (darkModeToggle.className === "dark-mode-switch") {
-      darkModeToggle.className += " responsive";
-    } else {
+    if (darkModeToggle.className === "dark-mode-switch responsive") {
       darkModeToggle.className = "dark-mode-switch";
     };
     }
