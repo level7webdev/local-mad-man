@@ -26,22 +26,10 @@
 }
 
 @font-face {
-  font-family: "roughtypewriterbold_italic";
-  src: url("/styles/fonts/rough_typewriter-bld-itl-webfont.woff2")
-      format("woff2"),
-    url("/styles/fonts/rough_typewriter-bld-itl-webfont.woff") format("woff");
-}
-
-@font-face {
-  font-family: "roughtypewriteritalic";
-  src: url("/styles/fonts/rough_typewriter-itl-webfont.woff2") format("woff2"),
-    url("/styles/fonts/rough_typewriter-itl-webfont.woff") format("woff");
-}
-
-@font-face {
   font-family: "roughtypewriterregular";
   src: url("/styles/fonts/rough_typewriter-webfont.woff2") format("woff2"),
-    url("/styles/fonts/rough_typewriter-webfont.woff") format("woff");
+    url("/styles/fonts/rough_typewriter-webfont.woff") format("woff"),
+    url("/styles/fonts/rough_typewriter.otf") format("otf");
 }
 
 html {
@@ -53,7 +41,8 @@ body {
   color: var(--darkMode-text);
   min-height: 100%;
   width: 100%;
-  font-family: "roughtypewriterregular", Georgia, Times, serif;
+  font-family: "Special Elite", serif;
+  letter-spacing: 0.08ch;
 }
 
 img {
@@ -80,6 +69,12 @@ h2 {
 p {
   font-size: 1.2rem;
   line-height: 2rem;
+  letter-spacing: 0.1ch;
+  padding-bottom: 2rem;;
+}
+
+footer p {
+  padding-bottom: 0px;
 }
 
 figcaption {
@@ -89,11 +84,16 @@ figcaption {
 .card-text {
   font-size: 1rem;
   line-height: 1.7rem;
+  padding-bottom: 0.5rem;;
 }
 
 .band li {
   list-style-type: none;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.gig-date {
+  font-size: 0.9rem;
 }
 
 footer {
@@ -127,7 +127,8 @@ footer {
 }
 
 .topNav a {
-  font-family: "roughtypewriterregular", Georgia, Times, serif;
+  /* font-family: "roughtypewriterregular", Georgia, Times, serif; */
+  font-family: "Special Elite", serif;
   float: left;
   display: block;
   padding: 0px 14px;
@@ -187,7 +188,7 @@ a:focus {
 
 .gig-date {
   margin-bottom: 0.75rem;
-  padding: 0.25rem 0;
+  padding: 0.45rem 3px;
   background-color: var(--darkMode-gig-bkg);
   border: 1px solid var(--darkMode-gig-border);
   border-radius: 3px;
@@ -245,6 +246,12 @@ main img {
 @media screen and (max-width: 1200px) {
   p {
     font-size: 1.1rem;
+    overflow: auto;
+  }
+  .gig-date {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+    overflow: auto;
   }
   .anchor {
     top: -80px;
@@ -270,6 +277,7 @@ main img {
   .gig-date {
     font-size: 0.9rem;
     line-height: 1.8rem;
+    overflow: auto;
   }
   .anchor {
     top: -60px;
@@ -289,18 +297,19 @@ main img {
   .topNav.responsive {
     background-color: var(--darkMode-bkg);
     position: absolute;
-    padding: 80px 0px;
+    padding: 100px 0px;
     height: 100vh;
-  }
-  .topNav.responsive a.icon {
-    position: fixed;
-    right: 0;
-    top: 16px;
   }
   .topNav.responsive a {
     float: none;
     display: block;
-    padding: 4px auto;
+    padding: 8px 0px;
+  }
+  .topNav.responsive a.icon {
+    position: fixed;
+    padding: 0px 0px;
+    right: 0;
+    top: 16px;
   }
   .topNav .dark-mode-switch {
     float: none;
